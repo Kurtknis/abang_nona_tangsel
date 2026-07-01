@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+    --primary: 173 70% 18%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 42 42% 57%;
+    --secondary-foreground: 0 0% 11%;
+    --muted: 40 33% 97%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 40 33% 97%;
+    --accent-foreground: 173 70% 18%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 173 70% 18%;
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ivory text-neutral-dark font-body text-body;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold text-neutral-dark;
+  }
+
+  ::selection {
+    @apply bg-emerald-950/20 text-emerald-950;
+  }
+}
+
+@layer components {
+  .container-enterprise {
+    @apply mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glassmorphism {
+    @apply bg-white/80 backdrop-blur-xl backdrop-saturate-150 border-b border-white/20;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .heading-display {
+    @apply font-display font-bold text-display-hero text-neutral-dark tracking-tight;
+  }
+
+  .heading-1 {
+    @apply font-display font-bold text-h1 text-neutral-dark;
+  }
+
+  .heading-2 {
+    @apply font-display font-semibold text-h2 text-neutral-dark;
+  }
+
+  .heading-3 {
+    @apply font-display font-semibold text-h3 text-neutral-dark;
+  }
+
+  .body-large {
+    @apply font-body text-body text-neutral-dark/80 leading-relaxed;
+  }
+
+  .label-small {
+    @apply font-jakarta text-small font-semibold uppercase tracking-widest text-gold-500;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-950 px-8 py-4 \
+           font-jakarta font-semibold text-white transition-all duration-300 \
+           hover:bg-emerald-900 hover:shadow-elevated hover:-translate-y-0.5 \
+           focus:outline-none focus:ring-2 focus:ring-emerald-950 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-emerald-950 \
+           px-8 py-4 font-jakarta font-semibold text-emerald-950 transition-all duration-300 \
+           hover:bg-emerald-950 hover:text-white focus:outline-none focus:ring-2 \
+           focus:ring-emerald-950 focus:ring-offset-2;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gold-500 px-8 py-4 \
+           font-jakarta font-semibold text-white transition-all duration-300 \
+           hover:bg-gold-600 hover:shadow-elevated hover:-translate-y-0.5;
+  }
+
+  .card-enterprise {
+    @apply rounded-xl bg-white p-6 shadow-card transition-all duration-300 \
+           hover:shadow-elevated hover:-translate-y-1;
+  }
+
+  .link-underline {
+    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-[2px] \
+           after:w-0 after:bg-gold-500 after:transition-all after:duration-300 \
+           hover:after:w-full;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/40 to-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
