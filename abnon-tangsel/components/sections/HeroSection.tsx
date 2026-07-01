@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Users, Calendar, Landmark } from "lucide-react";
+import { ArrowRight, MapPin, Users, Calendar, Landmark, type LucideIcon } from "lucide-react";
 import { stats, siteConfig } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
-const statIcons = [Users, Calendar, Landmark, MapPin];
+const statIcons: LucideIcon[] = [Users, Calendar, Landmark, MapPin];
 
 export default function HeroSection() {
   return (
@@ -120,6 +120,7 @@ export default function HeroSection() {
         >
           {stats.map((stat, index) => {
             const Icon = statIcons[index];
+            if (!Icon) return null;
             return (
               <div
                 key={stat.label}

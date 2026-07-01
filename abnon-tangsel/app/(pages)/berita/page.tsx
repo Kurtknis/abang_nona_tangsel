@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 const categories = ["Semua", "Pariwisata", "Pendidikan", "Digital", "Prestasi", "Sosial"];
 
 export default function BeritaPage() {
+  const featuredNews = news.length > 0 && news[0]?.featured ? news[0] : null;
+  
   return (
     <div className="pt-24 pb-20">
       <section className="bg-emerald-950 py-20 md:py-28">
@@ -50,13 +52,13 @@ export default function BeritaPage() {
             </div>
           </div>
 
-          {news.find((n) => n.featured) && (
+          {featuredNews && (
             <div className="mb-12">
               <article className="grid lg:grid-cols-2 gap-8 bg-white rounded-xl overflow-hidden shadow-card">
                 <div className="relative aspect-[16/10] lg:aspect-auto bg-emerald-950/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-emerald-950/20 font-display text-8xl font-bold">
-                      {news[0].title[0]}
+                      {featuredNews.title[0]}
                     </span>
                   </div>
                 </div>
@@ -65,19 +67,19 @@ export default function BeritaPage() {
                     Featured
                   </Badge>
                   <h2 className="font-display font-bold text-2xl md:text-3xl mb-4">
-                    {news[0].title}
+                    {featuredNews.title}
                   </h2>
                   <p className="text-neutral-dark/60 leading-relaxed mb-6">
-                    {news[0].excerpt}
+                    {featuredNews.excerpt}
                   </p>
                   <div className="flex items-center gap-4 text-sm text-neutral-dark/50 mb-6">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      {formatDate(news[0].date)}
+                      {formatDate(featuredNews.date)}
                     </span>
                     <span className="flex items-center gap-1">
                       <User className="w-4 h-4" />
-                      {news[0].author}
+                      {featuredNews.author}
                     </span>
                   </div>
                   <Link
