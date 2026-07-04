@@ -30,6 +30,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    // Close mobile menu and dropdowns when route changes
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [pathname]);
