@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white">
                 <Image
-                  src="/images/profile.png"
+                  src="/images/masterprofile.png"
                   alt="Abang Nona Tangerang Selatan"
                   fill
                   className="object-cover"

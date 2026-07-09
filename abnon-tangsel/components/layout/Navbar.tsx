@@ -51,7 +51,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden bg-white">
                 <Image
-                  src="/images/profile.png"
+                  src="/images/masterprofile.png"
                   alt="Abang Nona Tangerang Selatan"
                   fill
                   className="object-cover"

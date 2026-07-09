@@ -41,7 +41,7 @@ export default function AboutPreview() {
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto relative rounded-full overflow-hidden bg-emerald-950/10 mb-4">
                     <Image
-                      src="/images/profile.png"
+                      src="/images/masterprofile.png"
                       alt="Abang Nona Tangerang Selatan"
                       fill
                       className="object-cover"

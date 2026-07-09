@@ -94,7 +94,7 @@ export default function HeroSection() {
                 <div className="text-center space-y-4">
                   <div className="w-24 h-24 mx-auto relative rounded-full overflow-hidden bg-gold-500/20">
                     <Image
-                      src="/images/profile.png"
+                      src="/images/masterprofile.png"
                       alt="Abang Nona Tangerang Selatan"
                       fill
                       className="object-cover"
